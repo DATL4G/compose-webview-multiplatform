@@ -34,6 +34,9 @@ class DesktopWebView(private val webView: KCEFBrowser) : IWebView {
         encoding: String?,
         historyUrl: String?
     ) {
+        Logger.i {
+            "DesktopWebView loadHtml"
+        }
         if (html != null) {
             webView.loadHtml(html, baseUrl ?: KCEFBrowser.BLANK_URI)
         }
